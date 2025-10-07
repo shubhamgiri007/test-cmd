@@ -2,7 +2,7 @@
 
 A production-ready, AI-powered AWS security scanning application that demonstrates end-to-end security analysis with generative AI explanations and remediation guidance.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
@@ -38,7 +38,7 @@ cd web && npm run dev
 - API: http://localhost:3001
 - Health check: http://localhost:3001/health
 
-## 🏗️ Architecture
+## Architecture
 
 ### Backend API (`/api`)
 - **Framework:** Node.js + TypeScript + Express
@@ -67,7 +67,7 @@ cd web && npm run dev
 4. **RDS Encryption** (HIGH) - Detects unencrypted database instances
 5. **EC2 IAM Role** (MEDIUM) - Finds instances without attached IAM roles
 
-## 🎯 Key Features
+## Key Features
 
 ### AI-Powered Security Analysis
 - **Deterministic explanations:** No external API dependencies, consistent results
@@ -86,7 +86,7 @@ cd web && npm run dev
 - **Error Handling:** Graceful degradation and user feedback
 - **Documentation:** Clear API contracts and component interfaces
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -105,7 +105,7 @@ cd api && npm test -- --coverage
 - Resource normalization and data transformation
 - AI explanation generation (non-empty, contextual)
 
-## 📊 API Endpoints
+## API Endpoints
 
 ### `POST /api/scan`
 Scans AWS resources and returns finding count.
@@ -131,7 +131,7 @@ GET /api/findings?severity=HIGH&resource_type=s3&page=1&limit=20
 ### `GET /api/findings/:id`
 Get detailed finding with AI explanation and remediation steps.
 
-## 🎨 Design Choices & Trade-offs
+## Design Choices & Trade-offs
 
 ### Architecture Decisions
 - **SQLite over PostgreSQL:** Faster setup, sufficient for demo, easy production migration
@@ -151,14 +151,14 @@ Get detailed finding with AI explanation and remediation steps.
 - **Helmet middleware:** Security headers and XSS protection
 - **Error sanitization:** No sensitive data in error responses
 
-## ⏱️ Development Timeline
+## Development Timeline
 
 **Time Spent:** ~8 hours
 - Backend API & security rules: 3 hours
 - Frontend UI & components: 3 hours  
 - Testing & documentation: 2 hours
 
-## 🚢 Next Steps (1 Extra Day)
+## Next Steps (1 Extra Day)
 
 ### Immediate Improvements
 - **AWS Integration:** Real CloudFormation/Config scanning
@@ -178,7 +178,7 @@ Get detailed finding with AI explanation and remediation steps.
 - **Remediation Automation:** Terraform/CloudFormation templates
 - **Trend Analysis:** Historical data and security posture trends
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 ```bash
@@ -201,7 +201,3 @@ const db = new Database(process.env.DATABASE_URL); // PostgreSQL
 ## 📝 License
 
 MIT License - see LICENSE file for details.
-
----
-
-**Built with ❤️ for AWS security practitioners**
