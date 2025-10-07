@@ -1,0 +1,14 @@
+[
+  { "type": "s3", "name": "logs-bucket", "public": true, "account_id": "111111111111" },
+  { "type": "s3", "name": "private-data", "public": false, "account_id": "111111111111" },
+  { "type": "s3", "name": "public-website", "public": true, "account_id": "111111111111", "tags": { "PublicAllowed": "true" } },
+  { "type": "iam_user", "name": "dev-user", "access_key_age_days": 120, "account_id": "111111111111" },
+  { "type": "iam_user", "name": "new-user", "access_key_age_days": 30, "account_id": "111111111111" },
+  { "type": "rds", "name": "prod-db", "encrypted": false, "account_id": "222222222222" },
+  { "type": "rds", "name": "secure-db", "encrypted": true, "account_id": "222222222222" },
+  { "type": "sg", "name": "web-sg", "ingress": [{"cidr":"0.0.0.0/0","port":22}], "account_id": "222222222222" },
+  { "type": "sg", "name": "secure-sg", "ingress": [{"cidr":"10.0.0.0/8","port":22}], "account_id": "222222222222" },
+  { "type": "sg", "name": "db-sg", "ingress": [{"cidr":"0.0.0.0/0","port":3306}], "account_id": "222222222222" },
+  { "type": "ec2", "name": "app-01", "iam_role_attached": false, "account_id": "111111111111" },
+  { "type": "ec2", "name": "secure-app", "iam_role_attached": true, "account_id": "111111111111" }
+]
